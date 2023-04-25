@@ -1,0 +1,31 @@
+<!--Elabore um formulário HTML que tenha como entrada 3 valores para lados de um triângulo e 
+escreva uma função de nome tipoTriangulo que receba 3 parâmetros esses lados de um 
+triângulo e imprima o tipo dele em uma div(equilátero, isósceles ou escaleno).
+A passagem dos parâmetros deve ser feita de forma simplificada dentro do HTML no evento onclick de um botão ou link da 
+seguinte forma: <.... onclick = “tipoTriangulo(txtLado1.value, txtLado2.value,txtLado2.value)”...>-->
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function(tipoTriangulo){
+        if(x == y == z ){
+            console.log('equilátero');
+        }elseif(x == y|| x == z || y == x){
+            console.log('isósceles');
+        }elseif(x != y || x != z || y != z){
+            console.log('escaleno');
+        }
+    }
+</script>
+
+    <form id="triangulo">
+        <label for="x">Lado x:</label><br>
+            <input type="text" id="ladoX" name="ladoX"><br>
+        <label for="y">Lado y:</label><br>
+            <input type="text" id="ladoY" name="ladoY"><br><br>
+        <label for="z">Lado z:</label><br>
+            <input type="text" id="ladoZ" name="ladoZ"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+</body>
+</html>

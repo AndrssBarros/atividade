@@ -1,0 +1,29 @@
+<!--2. Deseja-se calcular a conta de consumo de energia elétrica de uma casa. Para isso, elabore um formulário em HTML que leia 
+a quantidade de Kwh consumidos e o valor unitário do Kwh.
+
+Escreva uma função em JavaScript que faça o cálculo (valor = quantidade x valor unitário) e, caso a quantidade de Kwh 
+ultrapasse 100, o valor do Kwh deve ser acrescido em 25%.Caso ultrapasse 200, o mesmo valor deve ser acrescido em 50%.
+Os valores devem ser repassados para para uma função em JavaScript conforme o exemplo anterior -->
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        x = kwh * wh;
+        function(calculo){
+            if(x > 100){
+                console.log(x*25);
+            }elseif(x > 200){
+                console.log(x*50);
+            }
+        }
+    </script>
+
+    <form id="energia">
+<label for="kwh">KWH:</label><br>
+    <input type="text" id="fname" name="kwh"><br>
+<label for="wh">Watt hora:</label><br>
+    <input type="text" id="lname" name="wh"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
