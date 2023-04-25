@@ -6,26 +6,37 @@ seguinte forma: <.... onclick = “tipoTriangulo(txtLado1.value, txtLado2.value,
 <!DOCTYPE html>
 <html>
 <body>
+
 <script>
-    function(tipoTriangulo){
-        if(x == y == z ){
-            console.log('equilátero');
-        }elseif(x == y|| x == z || y == x){
-            console.log('isósceles');
-        }elseif(x != y || x != z || y != z){
-            console.log('escaleno');
+    function tipoTriangulo() {
+        var ladoX = parseFloat(document.getElementById("ladoX").value);
+
+        var ladoY = parseFloat(document.getElementById("ladoY").value);
+
+        var ladoZ = parseFloat(document.getElementById("ladoZ").value);
+
+        if (ladoX === ladoY && ladoX === ladoZ && ladoY === ladoX) {
+            alert('equilátero');
+        } else if (ladoX === ladoY || ladoX === ladoZ || ladoY === ladoX) {
+            alert('isósceles');
+        } else if (ladoX !== ladoY && ladoX !== ladoZ && ladoY !== ladoZ) {
+            alert('escaleno');
         }
+
     }
 </script>
 
     <form id="triangulo">
-        <label for="x">Lado x:</label><br>
-            <input type="text" id="ladoX" name="ladoX"><br>
-        <label for="y">Lado y:</label><br>
-            <input type="text" id="ladoY" name="ladoY"><br><br>
-        <label for="z">Lado z:</label><br>
-            <input type="text" id="ladoZ" name="ladoZ"><br><br>
-            <input type="submit" value="Submit">
-          </form>
+        <label for="ladoX">Lado x:</label><br>
+        <input type="text" id="ladoX" name="ladoX"><br>
+        
+        <label for="ladoY">Lado y:</label><br>
+        <input type="text" id="ladoY" name="ladoY"><br><br>
+        
+        <label for="ladoZ">Lado z:</label><br>
+        <input type="text" id="ladoZ" name="ladoZ"><br><br>
+        
+        <button onclick="tipoTriangulo()">Enviar</button>
+    </form>
 </body>
 </html>
